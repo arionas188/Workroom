@@ -1,0 +1,162 @@
+/* TailwindCSS default breakpoints:
+// sm:    640px
+// md:    768px
+// lg:    1024px
+// xl:   1280px
+// 2xl:  1536px */
+
+html {
+}
+
+
+body {
+  font-family: 'Geologica';    
+
+}
+
+/* goTopBtn - Start */
+  #goTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 99;
+    background-color: rgb(133, 204, 209 ,0.6 ); /* Γκρι με διαφάνεια */
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+#goTopBtn:hover {
+    background-color: rgb(133, 204, 209); /* Σκούροτερο γκρι στο hover */
+}
+/* goTopBtn - End */
+
+/* Floating Cookie Settings Button - Start */
+#cookieSettingsBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: none;
+    z-index: 99;
+    background-color:  rgb(133, 204, 209, 0.6); /* Blue με διαφάνεια */
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2px 2px;
+    border-radius: 50px; /* Στρογγυλό */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    min-width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+#cookieSettingsBtn:hover {
+    background-color: rgb(133, 204, 209);
+}
+
+#cookieSettingsBtn .cookie-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+}
+
+#cookieSettingsBtn .cookie-text {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Responsive - hide text on mobile, show only icon */
+@media (max-width: 768px) {
+    #cookieSettingsBtn {
+        min-width: fit-content;
+        padding: 2px;
+    }
+    
+    #cookieSettingsBtn .cookie-text {
+        display: none;
+    }
+    
+    #cookieSettingsBtn .cookie-icon {
+        margin-right: 0;
+    }
+}
+/* Floating Cookie Settings Button - End */
+
+
+/* Smooth scroll-into-view animations - hide until animated (prevents flicker) */
+.animate-on-scroll:not(.animate__animated) {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+/* border for realative projects to bottom of the site*/
+.custom-nav-border {
+  border-right: 3px solid rgb(133, 204, 209); /* μόνο κάτω με το χρώμα σου */
+  border-top-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+  border-bottom-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+}
+
+/* border for realative projects to bottom of the site*/
+.custom-footer-border-bottom {
+  border-bottom: 3px solid rgb(133, 204, 209); /* μόνο κάτω με το χρώμα σου */
+  border-bottom-left-radius: 2rem;  /* στρογγυλή κάτω αριστερά */
+  border-bottom-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+
+}
+.custom-footer-border-top {
+  border-top-left-radius: 2rem;  /* στρογγυλή κάτω αριστερά */
+  border-top-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+
+}
+
+.custom-general-border-top {
+  border-top-left-radius: 2rem;  /* στρογγυλή κάτω αριστερά */
+  border-top-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+}
+.custom-general-border-bottom {
+  border-bottom-left-radius: 2rem;  /* στρογγυλή κάτω αριστερά */
+  border-bottom-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+}
+
+
+/* desktop / large screens: από 1024px και άνω και εφαρμοζονται διαφορετικα border στην κατηγορια projects */
+@media (min-width: 1024px) {
+  .custom-project-rigth-top-bottom {
+    border-top-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+    border-bottom-right-radius: 2rem; /* στρογγυλή κάτω δεξιά */
+    border-top-left-radius: 0rem;  /* στρογγυλή κάτω αριστερά */
+  }
+}
+.custom-color-footer-line {
+  color:#85ccd1;
+}
+.custom-color-line {
+  color:#85ccd1;
+}
+
+.custom-color-text > section {
+  color:#85ccd1;
+}
+.custom-color-border {
+  border-color: rgb(133, 204, 209) ;
+}
+.circular-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 ;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(133, 204, 209);
+}
