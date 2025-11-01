@@ -2,7 +2,7 @@
 :root{  
     --cc-bg: #ffffff; /* Χρώμα background του modal */
     --cc-primary-color: #2c2f31; /* Κύριο χρώμα κειμένου */
-    --cc-secondary-color: #5e6266; /* Δευτερεύον χρώμα κειμένου */
+    --cc-secondary-color: #292a2b; /* Δευτερεύον χρώμα κειμένου */
 
     --cc-btn-primary-bg: #30363c; /* Background του primary κουμπιού (π.χ. Accept all) */
     --cc-btn-primary-color: #ffffff; /* Χρώμα κειμένου του primary κουμπιού */
@@ -57,7 +57,7 @@
     --cc-bg: #fdf7f7;                                                    /* Χρώμα background του modal */
     --cc-text: #050505;                                                  /* κείμενο */
     --cc-btn-primary-bg: rgb(133, 204, 209);                             /* bg κουμπιου primary */
-    --cc-btn-primary-color: #ffffff;                                     /* Χρώμα κειμένου του primary κουμπιού */
+    --cc-btn-primary-color: #050505;                                     /* Χρώμα κειμένου του primary κουμπιού */
     --cc-btn-primary-hover-color:#ffffff;                                /* Χρώμα κειμένου primary στο hover */
     --cc-btn-primary-hover-bg: rgb(133, 204, 209);                       /* Background secondary όταν κάνεις hover */
     --cc-btn-primary-hover-border-color: var(--cc-btn-primary-hover-bg);   /* Border στο hover του primary κουμπιού */
@@ -66,7 +66,7 @@
     --cc-btn-secondary-bg: #a3d3ee;                                     /* Background του secondary (Διαχειριση προτιμησεων) κουμπιού (π.χ. Reject all) */
     --cc-btn-secondary-hover-color:#ffffff;                             /* Χρώμα κειμένου secondary στο hover */
     --cc-btn-secondary-hover-bg: rgb(133, 204, 209);                    /* Background secondary (Διαχειριση προτιμησεων) όταν κάνεις hover */
-    --cc-btn-secondary-color: #ffffff;                                  /* Χρώμα κειμένου του secondary κουμπιού */
+    --cc-btn-secondary-color: #050505;                                  /* Χρώμα κειμένου του secondary κουμπιού */
     --cc-btn-secondary-border-color: var(--cc-btn-secondary-bg);          /* Border του secondary κουμπιού */
     --cc-btn-border-radius: 10px;                                         /* στρογγυλάδες */
     --cc-font-family: 'Geologica', sans-serif;
