@@ -200,7 +200,7 @@
               Χρησιμοποιούμε δύο βασικές κατηγορίες cookies:
             </p>
             
-            <div class="overflow-x-auto">
+            <div class="hidden md:block overflow-x-auto">
               <table class="min-w-full divide-y divide-gray-200 border border-gray-300">
                 <thead>
                   <tr class="bg-gray-100">
@@ -214,8 +214,18 @@
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap font-semibold">Απολύτως Απαραίτητα<br>(First-Party)</td>
                     <td class="px-6 py-4">Απαραίτητα για την ομαλή λειτουργία, την ασφαλή σύνδεση και την αποθήκευση της επιλογής σας σχετικά με τη συγκατάθεση των cookies.</td>
-                    <td class="px-6 py-4 text-green-600 ">Όχι</td>
-                    <td class="px-6 py-4 text-green-600">Όχι</td>
+                    <td class="px-6 py-4 text-gray-900">
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Όχι
+                      </span>
+                    </td>
+                    <td class="px-6 py-4 text-gray-900">
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Όχι
+                      </span>
+                    </td>
                   </tr>
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap font-semibold">Ανάλυσης (Google Analytics)<br>(Third-Party)</td>
@@ -226,12 +236,95 @@
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap font-semibold">Ανάλυσης (Google Maps)<br>(link)</td>
                     <td class="px-6 py-4">Ανακατεύθυνση σε εξωτερικό χάρτη για εμφάνιση τοποθεσίας.</td>
-                    <td class="px-6 py-4 text-green-600">-</td>
-                    <td class="px-6 py-4 text-green-600">Όχι</td>
+                    <td class="px-6 py-4 text-gray-900">
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        -
+                      </span>
+                    </td>
+                    <td class="px-6 py-4 text-gray-900">
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Όχι
+                      </span>
+                    </td>
                   </tr>
 
                 </tbody>
               </table>
+            </div>
+            <div class="md:hidden space-y-6">
+              <article class="rounded-lg border border-gray-300 bg-white p-4 shadow-sm">
+                <h3 class="text-lg font-semibold text-sky-700">Απολύτως Απαραίτητα (First-Party)</h3>
+                <dl class="mt-3 space-y-3 text-gray-900">
+                  <div>
+                    <dt class="font-semibold">Σκοπός</dt>
+                    <dd>Απαραίτητα για την ομαλή λειτουργία, την ασφαλή σύνδεση και την αποθήκευση της επιλογής σας σχετικά με τη συγκατάθεση των cookies.</dd>
+                  </div>
+                  <div>
+                    <dt class="font-semibold">Διάρκεια</dt>
+                    <dd>
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Όχι
+                      </span>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-semibold">Απαιτείται Συγκατάθεση;</dt>
+                    <dd>
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Όχι
+                      </span>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+              <article class="rounded-lg border border-gray-300 bg-white p-4 shadow-sm">
+                <h3 class="text-lg font-semibold text-sky-700">Ανάλυσης (Google Analytics) (Third-Party)</h3>
+                <dl class="mt-3 space-y-3 text-gray-900">
+                  <div>
+                    <dt class="font-semibold">Σκοπός</dt>
+                    <dd>Συλλέγουν ανώνυμα στοιχεία για τον τρόπο χρήσης του ιστότοπου (π.χ. ποιες σελίδες βλέπετε, πόσο μένετε). Χρησιμοποιούνται για τη βελτίωση του περιεχομένου.</dd>
+                  </div>
+                  <div>
+                    <dt class="font-semibold">Διάρκεια</dt>
+                    <dd class="text-red-600 font-semibold">Ναι (Υποχρεωτικά)</dd>
+                  </div>
+                  <div>
+                    <dt class="font-semibold">Απαιτείται Συγκατάθεση;</dt>
+                    <dd class="text-red-600 font-semibold">Ναι (Υποχρεωτικά)</dd>
+                  </div>
+                </dl>
+              </article>
+              <article class="rounded-lg border border-gray-300 bg-white p-4 shadow-sm">
+                <h3 class="text-lg font-semibold text-sky-700">Ανάλυσης (Google Maps) (link)</h3>
+                <dl class="mt-3 space-y-3 text-gray-900">
+                  <div>
+                    <dt class="font-semibold">Σκοπός</dt>
+                    <dd>Ανακατεύθυνση σε εξωτερικό χάρτη για εμφάνιση τοποθεσίας.</dd>
+                  </div>
+                  <div>
+                    <dt class="font-semibold">Διάρκεια</dt>
+                    <dd>
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        -
+                      </span>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt class="font-semibold">Απαιτείται Συγκατάθεση;</dt>
+                    <dd>
+                      <span class="inline-flex items-center gap-2">
+                        <span class="h-2.5 w-2.5 rounded-full bg-green-500" aria-hidden="true"></span>
+                        Όχι
+                      </span>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
             </div>
         
           </section>
