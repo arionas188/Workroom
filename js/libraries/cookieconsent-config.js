@@ -274,7 +274,7 @@ CookieConsent.run({
                         },
                         {
                             title: 'Περισσότερες πληροφορίες',
-                            description: 'Για ερωτήσεις σχετικά με την πολιτική cookies και τις επιλογές σας, δείτε την <a href="cookies.html">Πολιτική Cookies</a> ή την <a href="privacy.html">Πολιτική Απορρήτου</a>.'
+                            description: 'Για ερωτήσεις σχετικά με την πολιτική cookies και τις επιλογές σας, δείτε την <a href="cookies.html">Πολιτική Cookies</a> ή την <a href="Privacy_Policy.html">Πολιτική Απορρήτου</a>.'
                         }
                     ]
                 }

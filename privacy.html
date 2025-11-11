@@ -26,13 +26,69 @@
     <link href="style-cookies.css" rel="stylesheet" >
   
 </head>
-<body class="p-6 max-w-4xl mx-auto font-sans text-gray-800">
-
-  <header class="mb-8 border-b pb-4">
+<body >
+  <header class="absolute inset-x-0 top-0 z-50 ">
+    <nav aria-label="Global" class="grid grid-cols-2 md:grid-cols-4 p-7 px-7">
+      <div class="flex ">
+        <a href="index.html" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img src="images/logo_W.webp" alt="WorkRoom W Logo" class="h-8 w-auto"  width="744" height="335" loading="lazy"/>
+        </a>
+      </div>
+      <div class="hidden md:flex justify-center col-span-2 gap-4">
+        <a href="projects.html" class="text-sm/6 font-semibold text-gray-900">PROJECTS</a>
+        <a href="news.html" class="text-sm/6 font-semibold text-gray-900">NEWS</a>
+        <a href="index.html#about-us" class="text-sm/6 font-semibold text-gray-900">ABOUT US</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">SERVICES</a>
+      </div>
+      <div class="flex justify-end md:hidden">
+        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black-500">
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile-Menu - START -->
+    <el-dialog>
+      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <el-dialog-panel class="bg-white/20 backdrop-blur-xl border border-white/30 shadow-lg rounded-2xl h-fit  fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img src="images/logo_W.webp" alt="Logo of WorkRoom W - Architecture & Design Company " class="h-8 w-auto" width="744" height="335" loading="lazy"/>
+              </a>
+              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6 flex flex-col items-center">
+                  <a href="projects.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">PROJECTS</a>
+                  <a href="news.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">NEWS</a>
+                  <a href="index.html#about-us" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">ABOUT US</a>
+                  <a href="index.html#services" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">SERVICES</a>
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+    <!-- Mobile-Menu - END -->
+  </header>
+<main class="h-auto pt-42 px-6 max-w-4xl mx-auto font-sans text-gray-800 overflow-x-hidden">
+  <section class="mb-8 border-b pb-4">
     <h1 class="text-4xl font-extrabold text-blue-800">Πολιτική Απορρήτου & Συμμόρφωση με τον GDPR</h1>
     <p class="text-lg text-gray-600">WorkRoom W - Architecture & Design | Larissa</p>
     <p class="text-sm text-gray-500 mt-2">Τελευταία ενημέρωση: Σεπτέμβριος 2025</p>
-  </header>
+  </section>
 
   <section class="mb-8">
     <h2 class="text-2xl font-bold mt-6 mb-3 text-blue-700">1. Γενικές Πληροφορίες</h2>
@@ -59,7 +115,7 @@
       προστατεύουμε τα προσωπικά σας δεδομένα όταν επισκέπτεστε τον ιστότοπό μας 
       <strong>www.workroomw.gr</strong>.
     </p>
-    <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-600">1.1 Σχετική Νομοθεσία</h3>
+    <h3 class="text-xl font-semibold mt-4 mb-2 text-sky-700">1.1 Σχετική Νομοθεσία</h3>
     <p class="mb-4">
       Ο ιστότοπός , της εταιρείας μας έχει σχεδιαστεί για να συμμορφώνεται με την ισχύουσα νομοθεσία σχετικά με την προστασία των προσωπικών δεδομένων των χρηστών, και ειδικότερα με:
     </p>    </p>
@@ -86,14 +142,14 @@
   <section class="mb-8">
     <h2 class="text-2xl font-bold mt-6 mb-3 text-blue-700">3. Προσωπικά Δεδομένα που Συλλέγουμε</h2>
     
-    <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-600">3.1 Δεδομένα που συλλέγονται αυτόματα</h3>
+    <h3 class="text-xl font-semibold mt-4 mb-2 text-sky-700">3.1 Δεδομένα που συλλέγονται αυτόματα</h3>
     <ul class="list-disc pl-6 mb-4 space-y-2">
       <li><strong>Δεδομένα περιήγησης:</strong> IP διεύθυνση, τύπος browser, λειτουργικό σύστημα</li>
       <li><strong>Δεδομένα χρήσης:</strong> Σελίδες που επισκέφθηκες, χρόνος παραμονής, πηγή επισκέψεως</li>
       <li><strong>Cookies:</strong> Απαραίτητα cookies για τη λειτουργία του ιστότοπου</li>
     </ul>
 
-    <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-600">3.2 Δεδομένα που παρέχεις εθελοντικά</h3>
+    <h3 class="text-xl font-semibold mt-4 mb-2 text-sky-700">3.2 Δεδομένα που παρέχεις εθελοντικά</h3>
     <ul class="list-disc pl-6 mb-4 space-y-2">
       <li><strong>Στοιχεία επικοινωνίας:</strong> Όνομα, email, τηλέφωνο (όταν μας επικοινωνείς)</li>
       <p class="mb-4">
@@ -172,7 +228,7 @@
   <section class="mb-8">
     <h2 class="text-2xl font-bold mt-6 mb-3 text-blue-700">5. Υπηρεσίες Τρίτων</h2>
     
-    <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-600">5.1 Google Analytics</h3>
+    <h3 class="text-xl font-semibold mt-4 mb-2 text-sky-700">5.1 Google Analytics</h3>
     <div class="bg-yellow-50 p-4 rounded-lg mb-4">
       <p class="mb-2"><strong>Σκοπός:</strong> Ανάλυση επισκεψιμότητας και βελτίωση του ιστότοπου</p>
       <p class="mb-2"><strong>Δεδομένα:</strong> Ανώνυμα δεδομένα περιήγησης</p>
@@ -187,7 +243,7 @@
         θα την βρείτε στον παραπάνω σύνδεσμο.     </p>
       </div>
 
-    <h3 class="text-xl font-semibold mt-4 mb-2 text-blue-600">5.2 Google Maps</h3>
+    <h3 class="text-xl font-semibold mt-4 mb-2 text-sky-700">5.2 Google Maps</h3>
     <div class="bg-yellow-50 p-4 rounded-lg mb-4">
       <p class="mb-2"><strong>Σκοπός:</strong> Εμφάνιση της τοποθεσίας του γραφείου μας</p>
       <p class="mb-2"><strong>Δεδομένα:</strong> IP διεύθυνση, τοποθεσία (αν επιτρέπεται)</p>
@@ -215,7 +271,7 @@
       <div class="bg-green-50 p-4 rounded-lg">
         <h4 class="font-semibold text-green-800 mb-2">Δικαίωμα Πρόσβασης [άρθρο 15 GDPR]</h4>
         <p class="text-sm">Μπορείτε να ζητήσετε πληροφορίες για τα δεδομένα που διατηρούμε</p>
-        <h5 class="text-sm font-semibold mt-4 mb-2 text-blue-600">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
+        <h5 class="text-sm font-semibold mt-4 mb-2 text-sky-700">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>Να μάθει αν επεξεργάζομαστε προσωπικά δεδομένα του.</li>
           <li>Να λάβει αντίγραφο αυτών των δεδομένων (χωρίς χρέωση για το πρώτο αντίγραφο).</li>
@@ -230,7 +286,7 @@
       <div class="bg-green-50 p-4 rounded-lg mt-4">
         <h4 class="font-semibold text-green-800 mb-2">Δικαίωμα Διόρθωσης [άρθρο 16 GDPR]</h4>
         <p class="text-sm">Μπορείτε να ζητήσετε να διορθωθούν ανακριβή ή ελλιπή προσωπικά δεδομένα που διατηρούνται:</p>
-        <h5 class="text-sm font-semibold mt-4 mb-2 text-blue-600">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
+        <h5 class="text-sm font-semibold mt-4 mb-2 text-sky-700">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>Αν έχεις στοιχεία που είναι λάθος (π.χ. email, όνομα, στοιχεία επικοινωνίας), ο χρήστης μπορεί να ζητήσει να τα διορθώσεις.</li>
           <li>Αν τα δεδομένα είναι ελλιπή, μπορεί να ζητήσει να τα συμπληρώσεις.</li>
@@ -246,7 +302,7 @@
       <div class="bg-green-50 p-4 rounded-lg mt-4">
         <h4 class="font-semibold text-green-800 mb-2">Δικαίωμα Διαγραφής [Άρθρο 17 GDPR]</h4>
         <p class="text-sm">Μπορείτε να ζητήσετε να τη διαγραφή των προσωπικών σας δεδομένων όταν ισχύει οποιοσδήποτε από τους παρακάτω λόγους:</p>
-        <h5 class="text-sm font-semibold mt-4 mb-2 text-blue-600">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
+        <h5 class="text-sm font-semibold mt-4 mb-2 text-sky-700">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>Τα δεδομένα δεν είναι πλέον απαραίτητα για τον σκοπό που συλλέχθηκαν.</li>
           <li>Τα δεδομένα έχουν υποβληθεί σε παράνομη επεξεργασία.</li>
@@ -262,7 +318,7 @@
         <p class="text-sm">
           Μπορείτε να ανακαλέσετε οποιαδήποτε συγκατάθεση έχετε δώσει για την επεξεργασία των προσωπικών σας δεδομένων ανά πάσα στιγμή.
         </p>
-        <h5 class="text-sm font-semibold mt-4 mb-2 text-blue-600">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
+        <h5 class="text-sm font-semibold mt-4 mb-2 text-sky-700">Σημαίνει ότι ο χρήστης έχει το δικαίωμα:</h5>
         <ul class="list-disc pl-6 mb-4 space-y-2">
           <li>Η ανάκληση πρέπει να είναι εύκολη και άμεση, όπως δόθηκε η αρχική συγκατάθεση.</li>
           <li>Η ανάκληση δεν επηρεάζει τη νομιμότητα της επεξεργασίας που έγινε πριν από αυτήν.</li>
@@ -315,6 +371,7 @@
       θα ενημερωθείτε μέσω του ιστότοπού μας. Συνιστούμε να ελέγχετε περιοδικά αυτή τη σελίδα.
     </p>
   </section>
+</main>
 
   <footer class="relative -top-[-25rem] sm:-top-[-25rem] h-auto my-4 p-2 shadow-xl/20 custom-footer-border-bottom bg-cover bg-center bg-[url('images/pixabay.webp')]">
     <div class="p-2">
@@ -418,8 +475,8 @@
     </div>
     <!-- Cookie settings + Policies -->
     <div class="flex flex-col justify-center items-center md:flex-row md:justify-center md:gap-4 md:p-2">
-      <a href="cookies_policy.html" class="no-underline">Πολιτική Cookies</a>
-      <a href="privacy.html" class="no-underline">Πολιτική Απορρήτου</a>
+      <a href="Cookies_Policy.html" class="no-underline">Πολιτική Cookies</a>
+      <a href="Privacy_Policy.html" class="no-underline">Πολιτική Απορρήτου</a>
     </div>
     <!-- Line START -->
     <div class="border-b-2 custom-color-line w-40  md:w-55 2xl:w-60 mt-2 mx-auto"></div>
