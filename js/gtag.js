@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function loadAnalyticsOnce() {
     const gtagScript = document.createElement('script');
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-2SYFJ7QR4Q';
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7YXCDDKZC9';
     gtagScript.async = true;
     document.head.appendChild(gtagScript);
 
@@ -8,7 +8,7 @@ window.addEventListener('scroll', function loadAnalyticsOnce() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-2SYFJ7QR4Q');
+      gtag('config', 'G-7YXCDDKZC9');
     };
 
     window.removeEventListener('scroll', loadAnalyticsOnce);
