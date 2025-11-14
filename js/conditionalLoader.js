@@ -4,25 +4,50 @@
 
 /**
  * TailwindPlus Elements Conditional Loading
- * Φορτώνει το TailwindPlus Elements μόνο όταν ανοίξει το mobile menu
- * Εξοικονόμηση: ~23.6 KiB στο initial load
+ * Φορτώνει το TailwindPlus Elements νωρίτερα για mobile compatibility
+ * Στα mobile φορτώνει αμέσως, στα desktop με hover/touch
  */
-function loadTailwindPlusElements() {
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+    (window.matchMedia && window.matchMedia('(max-width: 768px)').matches);
+}
+
+async function loadTailwindPlusElements() {
+  // Ελέγχει αν το custom element έχει ήδη φορτώσει
+  if (window.customElements.get('el-dialog')) {
+    return; // Έχει φορτώσει ήδη
+  }
+
   const mobileMenuBtn = document.querySelector('[commandfor="mobile-menu"]');
   
-  if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', async () => {
-      // Ελέγχει αν το custom element έχει ήδη φορτώσει
-      if (!window.customElements.get('el-dialog')) {
-        try {
-          await import('https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1');
-          console.log('✅ TailwindPlus Elements loaded on-demand');
-        } catch (error) {
-          console.error('❌ Failed to load TailwindPlus Elements:', error);
-        }
-      }
-    }, { once: true }); // Εκτελείται μόνο μία φορά
+  if (!mobileMenuBtn) {
+    return; // Δεν υπάρχει button
   }
+
+  const loadElements = async () => {
+    if (!window.customElements.get('el-dialog')) {
+      try {
+        await import('https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1');
+        //  console.log('✅ TailwindPlus Elements loaded');
+      } catch (error) {
+        console.error('❌ Failed to load TailwindPlus Elements:', error);
+      }
+    }
+  };
+
+  // Αν είναι mobile, φόρτωση αμέσως στο DOMContentLoaded
+  if (isMobileDevice()) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadElements);
+    } else {
+      loadElements();
+    }
+    return;
+  }
+
+  // Desktop: Lazy load με hover/touch
+  mobileMenuBtn.addEventListener('pointerenter', loadElements, { once: true });
+  mobileMenuBtn.addEventListener('touchstart', loadElements, { once: true, passive: true });
 }
 
 // Initialize conditional loaders

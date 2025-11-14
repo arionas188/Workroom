@@ -1,6 +1,7 @@
-import './topButton.js';
-import './smoothScroll.js';
-import './typeWriter.js';
-import './scrollAnimations.js';
-import './footerSetYear.js';
-import './gtag.js'
+import "./topButton.js";
+import "./smoothScroll.js";
+import "./typeWriter.js";
+import "./scrollAnimations.js";
+import "./footerSetYear.js";
+import "./gtag.js";
+import "./pageLoader.js";
