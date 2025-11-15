@@ -1,49 +1,82 @@
 // Page Loader Script - Hides loader when page is ready -->
 (function () {
-  const loader = document.getElementById("page-loader");
-  const body = document.body;
+  let loaderHidden = false;
+  
+  // Wait for DOM to be ready to access elements
+  function getElements() {
+    return {
+      loader: document.getElementById("page-loader"),
+      body: document.body
+    };
+  }
 
   // Function to hide loader
   function hideLoader() {
-    if (loader && body.classList.contains("loading")) {
-      loader.classList.add("hidden");
-      // Remove loading class after transition completes
-      setTimeout(() => {
-        body.classList.remove("loading");
-        loader.style.display = "none";
-      }, 400); // Match CSS transition duration
+    if (loaderHidden) {
+      return;
     }
+    const { loader, body } = getElements();
+    if (!loader || !body || !body.classList.contains("loading")) {
+      return;
+    }
+    loaderHidden = true;
+    loader.classList.add("hidden");
+    // Remove loading class after transition completes
+    setTimeout(() => {
+      body.classList.remove("loading");
+      loader.style.display = "none";
+    }, 400); // Match CSS transition duration
   }
 
-  // Hide loader when DOM and critical assets are ready
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", () => {
-      // Wait for critical images/fonts to load, then hide loader
-      if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(() => {
-          // Small delay to ensure smooth transition
-          setTimeout(hideLoader, 100);
-        });
-      } else {
-        // Fallback if fonts API not available
-        window.addEventListener("load", hideLoader);
-      }
-    });
-  } else {
-    // DOM already ready
+  // Improved Android-compatible loading detection
+  function initLoader() {
+    // Ensure DOM is ready first
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", startLoaderDetection, { once: true });
+    } else {
+      startLoaderDetection();
+    }
+  }
+  
+  function startLoaderDetection() {
+    // Strategy 1: Try fonts.ready (fastest if available)
     if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => {
+      Promise.race([
+        document.fonts.ready,
+        new Promise(resolve => setTimeout(resolve, 1000)) // Max 1s wait for fonts
+      ]).then(() => {
         setTimeout(hideLoader, 100);
+      }).catch(() => {
+        // Fonts failed, use DOMContentLoaded fallback
+        if (document.readyState === "complete") {
+          setTimeout(hideLoader, 200);
+        } else {
+          window.addEventListener("load", hideLoader, { once: true });
+        }
       });
     } else {
-      window.addEventListener("load", hideLoader);
+      // Strategy 2: Wait for DOMContentLoaded + images
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => {
+          // Wait a bit for critical images, then hide
+          setTimeout(hideLoader, 300);
+        }, { once: true });
+      } else {
+        // DOM already loaded, hide soon
+        setTimeout(hideLoader, 300);
+      }
+      
+      // Also listen to window.load as backup
+      window.addEventListener("load", hideLoader, { once: true });
     }
   }
 
-  // Fallback: Hide loader after max 3 seconds (prevents stuck loader)
+  // Start loader detection
+  initLoader();
+
+  // Critical fallback: Hide loader after max 2 seconds (prevents stuck loader)
+  // Reduced from 3s for faster user experience on slow devices
   setTimeout(() => {
-    if (loader && body.classList.contains("loading")) {
-      hideLoader();
-    }
-  }, 3000);
+    hideLoader();
+  }, 2000);
 })();
