@@ -46,28 +46,6 @@ function updateGtagConsent() {
     });
 }
 
-/**
- * Helper function to load gtag.js script if not already loaded
- * Prevents CORB errors by ensuring script is loaded before calling gtag('config')
- */
-function loadGtagScript(gaId) {
-    return new Promise((resolve, reject) => {
-        // Check if gtag script is already loaded
-        if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) {
-            resolve();
-            return;
-        }
-
-        // Load the gtag.js script
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-        script.onload = () => resolve();
-        script.onerror = () => reject(new Error('Failed to load gtag.js'));
-        document.head.appendChild(script);
-    });
-}
-
 CookieConsent.run({
     // See: https://cookieconsent.orestbida.com/reference/configuration-reference.html#guioptions
     // ...
@@ -87,49 +65,22 @@ CookieConsent.run({
     onFirstConsent: () => {
         updateGtagConsent();
         if (CookieConsent.acceptedCategory && CookieConsent.acceptedCategory('analytics')) {
-            const gaId = 'G-7YXCDDKZC9'; // Use same ID as gtag.js
-            loadGtagScript(gaId).then(() => {
-                gtag('js', new Date());
-                gtag('config', gaId);
-            }).catch(err => {
-                console.warn('Analytics loading failed:', err);
-            });
+            gtag('js', new Date());
+            gtag('config', 'G-7YXCDDKZC9');
         }
     },
     onConsent: () => {
         updateGtagConsent();
         if (CookieConsent.acceptedCategory && CookieConsent.acceptedCategory('analytics')) {
-            const gaId = 'G-7YXCDDKZC9'; // Use same ID as gtag.js
-            // If script already loaded, just configure
-            if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) {
-                gtag('js', new Date());
-                gtag('config', gaId);
-            } else {
-                loadGtagScript(gaId).then(() => {
-                    gtag('js', new Date());
-                    gtag('config', gaId);
-                }).catch(err => {
-                    console.warn('Analytics loading failed:', err);
-                });
-            }
+            gtag('js', new Date());
+            gtag('config', 'G-7YXCDDKZC9');
         }
     },
     onChange: () => {
         updateGtagConsent();
         if (CookieConsent.acceptedCategory && CookieConsent.acceptedCategory('analytics')) {
-            const gaId = 'G-7YXCDDKZC9'; // Use same ID as gtag.js
-            // If script already loaded, just configure
-            if (document.querySelector(`script[src*="googletagmanager.com/gtag/js"]`)) {
-                gtag('js', new Date());
-                gtag('config', gaId);
-            } else {
-                loadGtagScript(gaId).then(() => {
-                    gtag('js', new Date());
-                    gtag('config', gaId);
-                }).catch(err => {
-                    console.warn('Analytics loading failed:', err);
-                });
-            }
+            gtag('js', new Date());
+            gtag('config', 'G-7YXCDDKZC9');
         }
     },
     // Configure categories and services
