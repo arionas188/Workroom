@@ -1,0 +1,18 @@
+# Ενεργοποίηση mod_rewrite
+RewriteEngine On
+
+# ============================
+# 1) Force HTTPS + www
+# Ό,τι και να γράψει ο χρήστης (http/https, με/χωρίς www)
+# θα καταλήγει σε: https://www.workroomarchitects.gr/...
+# ============================
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.workroomarchitects\.gr$ [NC]
+RewriteRule ^(.*)$ https://www.workroomarchitects.gr/$1 [L,R=301]
+
+# ============================
+# 2) /index.html -> /
+# Αν ζητηθεί ρητά το index.html, κάνε redirect στην ρίζα
+# ============================
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.workroomarchitects.gr/ [R=301,L]
