@@ -8,22 +8,22 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     <loc>https://www.workroomarchitects.gr/</loc>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/images/logo_W.webp</image:loc>
-      <image:title>Αρχιτεκτονικό γραφείο στη Λάρισα – WorkRoom W Architecture & Interior Design</image:title>
+      <image:title>Αρχιτεκτονικό γραφείο στη Λάρισα – WorkRoom W Architecture &amp; Interior Design</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/images/about_us_1.webp</image:loc>
-      <image:title>Αρχιτεκτονικό γραφείο Λάρισα – για αρχιτεκτονικές μελέτες & ανακαινίσεις κατοικιών</image:title>
+      <image:title>Αρχιτεκτονικό γραφείο Λάρισα – για αρχιτεκτονικές μελέτες &amp; ανακαινίσεις κατοικιών</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/images/Our_Team_2.webp</image:loc>
-      <image:title>Ομάδα αρχιτεκτόνων WorkRoom W – αρχιτεκτονική & εσωτερική διακόσμηση στη Λάρισα</image:title>
+      <image:title>Ομάδα αρχιτεκτόνων WorkRoom W – αρχιτεκτονική &amp; εσωτερική διακόσμηση στη Λάρισα</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://www.workroomarchitects.gr/projects.html</loc>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/images/projects.webp</image:loc>
-      <image:title>Projects αρχιτεκτονικού γραφείου WorkRoom W – ανακαινίσεις & interior design στη Λάρισα</image:title>
+      <image:title>Projects αρχιτεκτονικού γραφείου WorkRoom W – ανακαινίσεις &amp; interior design στη Λάρισα</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project1/Gallo_1_WorkRoomW.webp</image:loc>
@@ -54,7 +54,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project1/Gallo_3_WorkRoomW.webp</image:loc>
-      <image:title>Bar & counter design σε καφέ – Gallo interior design στη Λάρισα</image:title>
+      <image:title>Bar &amp; counter design σε καφέ – Gallo interior design στη Λάρισα</image:title>
     </image:image>
   </url>
   <url>
@@ -69,7 +69,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project2/Pharmacy_3_WorkRoomW.webp</image:loc>
-      <image:title>Εσωτερική διαρρύθμιση φαρμακείου – βιτρίνες & ράφια προϊόντων</image:title>
+      <image:title>Εσωτερική διαρρύθμιση φαρμακείου – βιτρίνες &amp; ράφια προϊόντων</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project2/Pharmacy_4_WorkRoomW.webp</image:loc>
@@ -81,7 +81,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project2/Pharmacy_6_WorkRoomW.webp</image:loc>
-      <image:title>Αρχιτεκτονική μελέτη φαρμακείου – τοίχος προϊόντων & φωτισμός</image:title>
+      <image:title>Αρχιτεκτονική μελέτη φαρμακείου – τοίχος προϊόντων &amp; φωτισμός</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project2/Pharmacy_7_WorkRoomW.webp</image:loc>
@@ -89,7 +89,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project2/Pharmacy_8_WorkRoomW.webp</image:loc>
-      <image:title>Λεπτομέρειες φωτισμού & υλικών – pharmacy interior design στη Λάρισα</image:title>
+      <image:title>Λεπτομέρειες φωτισμού &amp; υλικών – pharmacy interior design στη Λάρισα</image:title>
     </image:image>
   </url>
   <url>
@@ -108,7 +108,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project3/Therapist_4_WorkRoomW.webp</image:loc>
-      <image:title>Χώρος καθιστικού σε ιατρείο – interior design για άνεση & ηρεμία</image:title>
+      <image:title>Χώρος καθιστικού σε ιατρείο – interior design για άνεση &amp; ηρεμία</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project3/Therapist_5_WorkRoomW.webp</image:loc>
@@ -127,7 +127,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project4/LarissaVet_2_WorkRoomW.webp</image:loc>
-      <image:title>Χώρος αναμονής κτηνιατρείου – φιλικός σχεδιασμός για κατοικίδια & ιδιοκτήτες</image:title>
+      <image:title>Χώρος αναμονής κτηνιατρείου – φιλικός σχεδιασμός για κατοικίδια &amp; ιδιοκτήτες</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project4/LarissaVet_3_WorkRoomW.webp</image:loc>
@@ -139,15 +139,15 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project4/LarissaVet_5_WorkRoomW.webp</image:loc>
-      <image:title>Χώρος θεραπείας & φροντίδας ζώων – κτηνιατρείο με σύγχρονο design</image:title>
+      <image:title>Χώρος θεραπείας &amp; φροντίδας ζώων – κτηνιατρείο με σύγχρονο design</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project4/LarissaVet_6_WorkRoomW.webp</image:loc>
-      <image:title>Περιοχή προϊόντων & pet care – interior design κτηνιατρείου στη Λάρισα</image:title>
+      <image:title>Περιοχή προϊόντων &amp; pet care – interior design κτηνιατρείου στη Λάρισα</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project4/LarissaVet_7_WorkRoomW.webp</image:loc>
-      <image:title>Χώρος grooming & περιποίησης ζώων – LarissaVet clinic design</image:title>
+      <image:title>Χώρος grooming &amp; περιποίησης ζώων – LarissaVet clinic design</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/Project4/LarissaVet_8_WorkRoomW.webp</image:loc>
@@ -166,7 +166,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     <loc>https://www.workroomarchitects.gr/news.html</loc>
     <image:image>
       <image:loc>https://www.workroomarchitects.gr/images/logo_W.webp</image:loc>
-      <image:title>Νέα & ενημερώσεις από το αρχιτεκτονικό γραφείο WorkRoom W στη Λάρισα</image:title>
+      <image:title>Νέα &amp; ενημερώσεις από το αρχιτεκτονικό γραφείο WorkRoom W στη Λάρισα</image:title>
     </image:image>
   </url>
 </urlset>
