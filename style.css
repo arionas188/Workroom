@@ -201,3 +201,15 @@ body:not(.loading) #page-loader {
   border-width: 2px;
   border-color: rgb(133, 204, 209);
 }
+
+/* Team portraits (Sofia / Matina 2026) — mobile/tablet crop focuses on face */
+.team-portrait-img {
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+@media (min-width: 1280px) {
+  .team-portrait-img {
+    object-position: center center;
+  }
+}
