@@ -15,8 +15,16 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
       <image:title>Αρχιτεκτονικό γραφείο Λάρισα – για αρχιτεκτονικές μελέτες &amp; ανακαινίσεις κατοικιών</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://www.workroomarchitects.gr/images/Our_Team_2.webp</image:loc>
-      <image:title>Ομάδα αρχιτεκτόνων WorkRoom W – αρχιτεκτονική &amp; εσωτερική διακόσμηση στη Λάρισα</image:title>
+      <image:loc>https://www.workroomarchitects.gr/images/SofiaDimogianni_2026-1280.webp</image:loc>
+      <image:title>Σοφία Δημογιάννη – Αρχιτέκτονας WorkRoom, Λάρισα</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.workroomarchitects.gr/images/MatinaBoukouvala_2026-1280.webp</image:loc>
+      <image:title>Ματίνα Μπουκουβάλα – Αρχιτέκτονας WorkRoom, Λάρισα</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.workroomarchitects.gr/images/services.webp</image:loc>
+      <image:title>Υπηρεσίες αρχιτεκτονικού γραφείου WorkRoom – Λάρισα</image:title>
     </image:image>
   </url>
   <url>
