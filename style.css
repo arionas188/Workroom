@@ -202,10 +202,11 @@ body:not(.loading) #page-loader {
   border-color: rgb(133, 204, 209);
 }
 
-/* About us banner — dual portrait, both faces visible */
+/* About us banner — dual portrait, both faces visible (no stretch) */
 .about-hero-img {
   object-fit: cover;
   object-position: center 24%;
+  max-width: none;
 }
 
 @media (min-width: 768px) {
