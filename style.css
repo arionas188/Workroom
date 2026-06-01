@@ -202,6 +202,24 @@ body:not(.loading) #page-loader {
   border-color: rgb(133, 204, 209);
 }
 
+/* About us banner — dual portrait, both faces visible */
+.about-hero-img {
+  object-fit: cover;
+  object-position: center 24%;
+}
+
+@media (min-width: 768px) {
+  .about-hero-img {
+    object-position: center 22%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-hero-img {
+    object-position: center 26%;
+  }
+}
+
 /* Team portraits (Sofia / Matina 2026) — mobile/tablet crop focuses on face */
 .team-portrait-img {
   object-fit: cover;
